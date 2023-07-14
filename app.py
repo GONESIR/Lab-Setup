@@ -1,7 +1,9 @@
-from flask import Flask
+from flask import Flask, redirect, render_template
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return '<h1>Hello, World!<h1>'
+
+    
+    return render_template('index.html', home_active=True)
 
